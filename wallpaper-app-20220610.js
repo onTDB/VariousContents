@@ -139,10 +139,7 @@ function list_files(path,files){
         if(item['size']==undefined){
             item['size'] = "";
         }
-        if (item.name == "index.html") {
-            //redirect
-            window.location.href = path+"/index.html";
-        }
+    	if (item.name == "index.html") { window.location.href = path+"/index.html"; }
         item['modifiedTime'] = utc2beijing(item['modifiedTime']);
         item['size'] = formatFileSize(item['size']);
         if(item['mimeType'] == 'application/vnd.google-apps.folder'){
