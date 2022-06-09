@@ -127,7 +127,6 @@ function list(path){
                 history.go(-1);
             }
         }else if(typeof obj != 'null'){
-            for (item in obj.files) {if (item.name == "index.html") {window.location.href = path+"/index.html";}};
             list_files(path,obj.files);
         }
     });
